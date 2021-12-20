@@ -1,15 +1,17 @@
-apiVersion: apps/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: postgres
 spec:
+  # serviceName: postgresql-db-service
+  selector:
+    matchLabels:
+      app: postgres
   replicas: 1
-  strategy:
-    type: Recreate
   template:
     metadata:
       labels:
-        service: postgres 
+        app: postgres 
     spec:
       containers:
         - name: postgres
@@ -22,14 +24,15 @@ spec:
             - name: POSTGRES_USER
               value: testuser
             - name: POSTGRES_PASSWORD
+              # value: testpassword
               valueFrom: 
                 secretKeyRef:
                   name: my-secret
                   key: PASS
             - name: PGDATA
               value: "/var/lib/postgresql/data/pgdata"
-          volumeMount:
-            - mountPath: /var/lib/postgresql/data
+          volumeMounts:
+            - mountPath: "/var/lib/postgresql/data"
               name: pgdata
       volumes:
         - name: pgdata
