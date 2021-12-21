@@ -16,8 +16,6 @@ testdatabase=# \dt
 (1 row)
 
 testdatabase=# \q
-root@test:/# \q
-bash: q: command not found
 root@test:/# exit
 exit
 Session ended, resume using 'kubectl attach test -c test -i -t' command when the pod is running
