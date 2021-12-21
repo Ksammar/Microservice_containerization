@@ -5,4 +5,5 @@ metadata:
   name: my-secret
 data:
   username: dGVzdHVzZXIK
-  password: UE9TVEdSRVNfUEFTU1dPUkQK
+  password: dGVzdHBhc3N3b3JkCg==
+
