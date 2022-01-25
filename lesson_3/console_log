@@ -1,0 +1,29 @@
+   68  sudo dpkg -i VNC-Viewer-6.21.1109-Linux-x64.deb
+   69  sudo dpkg -i VNC-Viewer-6.21.1109-Linux-x64
+   70  ls
+   71  sudo dpkg -i VNC-Viewer-6.21.1109-Linux-x64.deb
+   72  sudo apt install -f
+   73  vncviewer viewer localhost:5900
+   74  vnc-viewer viewer localhost:5900
+   75  minikube status
+   76  minikube start
+   77  minikube status
+   78  kubectl apply -k manifest/
+   79  ls
+   80  cd lm
+   81  cd LM
+   82  ls
+   83  kubectl apply -k manifest/\
+   84  kubectl apply -k manifest/
+   85  vncviewer viewer localhost:5900
+   86  vncviewer viewer --help
+   87  vncviewer viewer 127.0.0.1:5900
+   88  kubectl get pod
+   89  kubectl get pods
+   90  kubectl create ns kubedoom
+   91  kubectl portforward
+   92  kubectl get pods -n kubedoom
+   93  kubectl port-forward kubedoom-57b69fdbc-g5fl6 5900:5900 -n kubedoom
+   94  sudo snap install vlc
+   95  vncviewer viewer localhost:5900
+   96  vncviewer viewer 127.0.0.1:5900
